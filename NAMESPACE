@@ -1,0 +1,29 @@
+#Imports: car, graphics, grDevices, methods, nlme, nortest, stats, vcd
+
+importClassesFrom(methods, list)
+
+importFrom(car, scatterplot)
+
+importFrom(graphics, barplot, boxplot, close.screen, legend, par, plot)
+
+importFrom(grDevices, dev.off, png)
+
+importFrom(methods, is, new, slot, slotNames)
+
+importFrom(nlme, ranef, varIdent, gls, lme)
+
+importFrom(nortest, cvm.test)
+
+importFrom(stats, anova, as.formula, fisher.test, model.frame,
+        model.matrix, na.omit, predict, qqline, qqnorm, relevel,
+        resid, sd)
+
+#importFrom(vcd, assocstats)
+importFrom(logistf, logistf, logistftest)
+
+importFrom(MASS, boxcox)
+
+#  All functions exported other than those starting with "."
+exportPattern("^[^\\.]")
+
+exportClasses("PhenList","PhenTestResult")
