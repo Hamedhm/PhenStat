@@ -50,7 +50,8 @@ qqplotGenotype<-function(phenTestResult,outputMessages=TRUE){
     } 
     else {
         # Plot creation
-        res <- resid(modeloutput)
+        # line 54 : resid(modeloutput) This is changed since there is a residulas column in the output (Hamed)
+        res <- modeloutput$residuals 
         data_all <- data.frame(x, res)
         a <- levels(data_all$Genotype)
         op <- par(mfrow=c(1,2))     
